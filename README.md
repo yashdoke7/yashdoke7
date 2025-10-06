@@ -2,67 +2,72 @@
 
 # Hi, I'm Yash Kailas Doke 👋
 
-🚀 Passionate about building intelligent systems at the crossroads of **AI, data, and optimization**.  
-I love solving tough problems — from routing ships through storms to detecting AI-generated videos — with clean code, solid research, and a curious mindset.
+🎓 Computer Engineering undergrad @ Savitribai Phule Pune University (2023–27)  
+📊 CGPA: **9.47 / 10**
+
+I specialize in **Machine Learning, AI research, and scalable backend systems**.  
+My work spans from fraud detection pipelines to ship-routing algorithms and research in AI-generated video detection.  
+Always curious, I enjoy tackling real-world challenges with ML, data, and efficient engineering.
 
 ---
 
-## 🔭 Current Work
-- **Ship Routing Optimization** → Dynamic pathfinding with A* + weather integration for fuel-efficient marine navigation.  
-- **Fraud Detection AI** → Real-time fraud detection using message/call analysis & transaction monitoring.  
-- **AI-Generated Media Detection** → Researching continual learning methods (UNITE, UNITE-CL) for detecting deepfake images & videos.
+## 🔭 Projects & Research
+
+### 🧩 AI-Generated Video Detection (Research Project)
+- Built a **continual learning pipeline** for deepfake detection with **SigLIP transformers**.  
+- Evaluated across **8 benchmark datasets** (DFDC, Celeb-DF, WildDeepfake, VidProM, etc.).  
+- Processed **50K+ video samples**, achieving **92% AUC-ROC** with scalable architecture.
+
+### ⚓ Ship Route Optimization (Full-Stack Application)
+- Developed a **weather-aware pathfinding system** using a modified **A\*** algorithm.  
+- Integrated real-time **OpenWeatherMap API** data (wind, sea, visibility).  
+- Designed an interactive **Leaflet.js frontend** with live route visualization.
+
+### 💳 Fraud Detection System (Production ML)
+- Built ML services processing **50K+ daily transactions** with **96.2% accuracy**.  
+- Used **XGBoost + Neural Networks**, advanced feature engineering, and class imbalance handling.  
+- Deployed scalable microservices with **FastAPI** and a **React.js dashboard**.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technical Skills
 
-**Languages & Frameworks:**  
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)  
-![R](https://img.shields.io/badge/-R-276DC3?logo=r&logoColor=white)  
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)  
-![SQL](https://img.shields.io/badge/-SQL-4479A1?logo=mysql&logoColor=white)  
-
-**Machine Learning & Data:**  
-![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?logo=pytorch&logoColor=white)  
-![scikit-learn](https://img.shields.io/badge/-scikit--learn-F7931E?logo=scikitlearn&logoColor=white)  
-![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?logo=opencv&logoColor=white)  
-![Pandas](https://img.shields.io/badge/-Pandas-150458?logo=pandas&logoColor=white)  
-![NumPy](https://img.shields.io/badge/-NumPy-013243?logo=numpy&logoColor=white)  
-
-**DevOps & Tools:**  
-![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)  
-![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)  
-![Linux](https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black)  
+**Languages:** Python, Java, JavaScript, C, C++  
+**Machine Learning & Data:** PyTorch, TensorFlow, Scikit-learn, Transformers, Model Deployment  
+**Web & API Development:** FastAPI, Flask, ReactJS, REST APIs, Asyncio  
+**Databases:** MySQL, MongoDB  
+**Tools:** Git, GitHub, VS Code, Jupyter, Google Colab, AWS Sagemaker  
+**CS Fundamentals:** Data Structures & Algorithms, OOP, Big Data Handling  
 
 ---
 
-## 📂 Featured Projects
+## 📈 Achievements & Certifications
 
-- 🔹 [**Ship-Router**](https://github.com/<your-username>/ship-router)  
-  Weather-aware A* path planning for maritime navigation.  
-
-- 🔹 [**Fraud-Detect**](https://github.com/<your-username>/fraud-detect)  
-  AI models to analyze SMS, calls, and transactions for fraud detection.  
-
-- 🔹 [**Deepfake-Guard**](https://github.com/<your-username>/deepfake-guard)  
-  Continual learning approach to detect AI-generated images & videos.  
+- **Machine Learning Specialization** — DeepLearning.AI & Stanford  
+- **Deep Learning Specialization** — DeepLearning.AI  
+- **Generative AI with LLMs** — DeepLearning.AI & AWS  
+- **Machine Learning in Production** — DeepLearning.AI  
+- Certified in Python, C++, and SQL  
 
 ---
 
-## 📊 GitHub Stats
+## 🌐 Connect with Me
 
-![Yash's GitHub Stats](https://github-readme-stats.vercel.app/api?username=<your-username>&show_icons=true&theme=radical)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=<your-username>&layout=compact&theme=radical)  
-
----
-
-## 🌐 Connect With Me
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com/in/<your-linkedin>)  
-[![Email](https://img.shields.io/badge/-Email-D14836?logo=gmail&logoColor=white)](mailto:<your-email>)  
-[![Portfolio](https://img.shields.io/badge/-Portfolio-000000?logo=vercel&logoColor=white)](https://<your-portfolio-site>)  
+📧 Email: [yashdoke215@gmail.com](mailto:yashdoke215@gmail.com)  
+🔗 LinkedIn: [linkedin.com/in/yash-doke](https://linkedin.com/in/yash-doke)  
+💻 GitHub: [github.com/yashdoke7](https://github.com/yashdoke7)
 
 ---
 
-## ✨ Quote I Live By
-> “Stay curious. Ship often. Never stop experimenting.”
+## 📊 GitHub Profile Metrics
+
+> If the stats card doesn’t load, check that username matches (`yashdoke7`).
+
+![Yash's GitHub Stats](https://github-readme-stats.vercel.app/api?username=yashdoke7&show_icons=true&theme=tokyonight)  
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yashdoke7&layout=compact&theme=tokyonight)
+
+---
+
+## ✨ Motto
+
+> “Stay curious, keep experimenting, and build things that matter.”
