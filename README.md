@@ -74,7 +74,9 @@ My focus areas include **AI system design**, **multi-agent reinforcement learnin
 ## 🌐 Connect
 
 📧 **Email:** [yashdoke215@gmail.com](mailto:yashdoke215@gmail.com)
+
 🔗 **LinkedIn:** [linkedin.com/in/yash-doke](https://linkedin.com/in/yash-doke)
+
 💻 **GitHub:** [github.com/yashdoke7](https://github.com/yashdoke7)
 
 ---
@@ -82,6 +84,7 @@ My focus areas include **AI system design**, **multi-agent reinforcement learnin
 ## 📊 GitHub Insights
 
 ![Yash's GitHub Stats](https://github-readme-stats.vercel.app/api?username=yashdoke7\&show_icons=true\&theme=tokyonight)
+
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yashdoke7\&layout=compact\&theme=tokyonight)
 
 ---
