@@ -51,13 +51,13 @@ My focus areas include **AI system design**, **multi-agent reinforcement learnin
 
 ## 🛠️ Technical Stack
 
-**Languages:** Python, Java, JavaScript, C, C++
-**Machine Learning:** PyTorch, TensorFlow, Scikit-learn, Transformers, OpenCV
-**AI Domains:** Reinforcement Learning, Generative AI, Continual Learning, Multi-Agent Systems
-**Web & API:** FastAPI, Flask, ReactJS, REST APIs, Asyncio
-**Databases:** MySQL, MongoDB
-**Tools:** Git, VS Code, Jupyter, AWS Sagemaker
-**Core CS:** DSA, OOP, Big Data, Systems Design
+* **Languages:** Python, Java, JavaScript, C, C++
+* **Machine Learning:** PyTorch, TensorFlow, Scikit-learn, Transformers, OpenCV
+* **AI Domains:** Reinforcement Learning, Generative AI, Continual Learning, Multi-Agent Systems
+* **Web & API:** FastAPI, Flask, ReactJS, REST APIs, Asyncio
+* **Databases:** MySQL, MongoDB
+* **Tools:** Git, VS Code, Jupyter, AWS Sagemaker
+* **Core CS:** DSA, OOP, Big Data, Systems Design
 
 ---
 
