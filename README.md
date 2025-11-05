@@ -81,14 +81,6 @@ My focus areas include **AI system design**, **multi-agent reinforcement learnin
 
 ---
 
-## 📊 GitHub Insights
-
-![Yash's GitHub Stats](https://github-readme-stats.vercel.app/api?username=yashdoke7\&show_icons=true\&theme=tokyonight)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yashdoke7\&layout=compact\&theme=tokyonight)
-
----
-
 ## ✨ Philosophy
 
 > “Research means nothing if it can’t perform in the real world. Build intelligently, deploy responsibly.”
