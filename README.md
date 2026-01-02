@@ -87,7 +87,3 @@ My focus areas include **AI system design**, **multi-agent reinforcement learnin
 
 ---
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yashdoke7&label=Profile%20Views&color=0e75b6&style=flat" />
-</p>
-
