@@ -1,89 +1,66 @@
----
+<h1 align="center">Hi 👋, I'm Yash Doke</h1>
 
-# 👋 Hi, I'm **Yash Kailas Doke**
+<p align="center">
+AI Systems • Multi-Agent Learning • LLM Infrastructure <br>
+Computer Engineering @ SPPU | CGPA: 9.47
+</p>
 
-🎓 **Computer Engineering undergrad** @ Savitribai Phule Pune University (2023–27)
-📊 **CGPA:** 9.47 / 10
-
-I’m building a bridge between **machine learning research** and **production-grade AI systems** — creating solutions that not only work in theory, but thrive in the real world.
-
-My focus areas include **AI system design**, **multi-agent reinforcement learning**, and **scalable ML backends**. I’m fascinated by how intelligent systems evolve, adapt, and make decisions — and I enjoy turning those ideas into functioning prototypes and deployable architectures.
-
----
-
-## 🚀 Projects & Research
-
-### 🎥 **AI-Generated Video Detection (Research Project)**
-
-* Designed a **continual learning pipeline** for deepfake and synthetic video detection using **SigLIP transformers**.
-* Benchmarked on **8 datasets** — including DFDC, Celeb-DF, WildDeepfake, and VidProM.
-* Processed **50K+ video samples**, achieving **92% AUC-ROC** and strong cross-dataset generalization.
-* Built scalable, modular code for **future continual adaptation** and **cross-domain evaluation**.
+<p align="center">
+Designing intelligent systems that move from <b>research ideas → real-world deployment</b>.
+</p>
 
 ---
 
-### ⚓ **Ship Route Optimization (Full-Stack System)**
+## 🚀 Featured Projects
 
-* Engineered a **weather-aware A*** pathfinding system** for optimal ship routing.
-* Integrated **OpenWeatherMap APIs** for real-time conditions like wind, visibility, and sea level.
-* Built a responsive **Leaflet.js dashboard** for route visualization and live tracking.
-* Optimized runtime and grid weighting with **adaptive subgrid handling** and **dynamic heuristics**.
+### 🎥 AI-Generated Video Detection
+Continual-learning deepfake detection pipeline using transformer embeddings  
+(SigLIP, cross-dataset evaluation, domain robustness).
 
----
+### ⚓ Ship Route Optimization
+Weather-aware A* navigation system integrating real-time environmental data  
+with scalable geospatial backend and visualization dashboard.
 
-### 💳 **Fraud Detection System (Production ML)**
-
-* Developed scalable ML microservices analyzing **50K+ transactions/day** with **96.2% accuracy**.
-* Combined **XGBoost** and **Neural Networks** for robust fraud classification.
-* Deployed using **FastAPI + React.js**, featuring live alerts and analytics visualization.
-* Implemented feature importance tracking and class imbalance resolution for real-time detection.
+### 💳 Fraud Detection System
+Production-style ML pipeline for real-time transaction monitoring using  
+ensemble learning and FastAPI inference services.
 
 ---
 
-### 🧠 **Self-Evolving Multi-Agent Governance (Hackathon Project)**
+## 🧪 Current Research & Systems
 
-* Built a **multi-agent reinforcement learning system** with **dynamic voting**, **reputation models**, and **adaptive policy evolution**.
-* Simulated decentralized decision-making for **governance and crypto trading**.
-* Explored **reward coordination**, **negotiation dynamics**, and **collaborative control** — merging AI and blockchain concepts.
-* Developed in 24 hours during **Fusion 2025 National Hackathon** (IIC ECELL SKNCOE, IEEE Student Branch).
+### ⚡ CodeArc
+Learning how software evolves by mining Git commit histories to train models
+on the transition from prototype → production systems.
 
----
+### 🧠 LLM-HierMem
+Hierarchical memory architecture inspired by OS virtual memory enabling
+stable long-context reasoning without constraint loss.
 
-## 🛠️ Technical Stack
-
-* **Languages:** Python, Java, JavaScript, C, C++
-* **Machine Learning:** PyTorch, TensorFlow, Scikit-learn, Transformers, OpenCV
-* **AI Domains:** Reinforcement Learning, Generative AI, Continual Learning, Multi-Agent Systems
-* **Web & API:** FastAPI, Flask, ReactJS, REST APIs, Asyncio
-* **Databases:** MySQL, MongoDB
-* **Tools:** Git, VS Code, Jupyter, AWS Sagemaker
-* **Core CS:** DSA, OOP, Big Data, Systems Design
+### 🔬 LLM Reasoning Pipeline
+Step-level reasoning evaluation framework identifying *where*
+LLMs fail with targeted mitigation and LoRA refinement.
 
 ---
 
-## 📜 Certifications
+## 🛠 Tech Stack
 
-* **Machine Learning Specialization** — DeepLearning.AI & Stanford
-* **Deep Learning Specialization** — DeepLearning.AI
-* **Generative AI with LLMs** — DeepLearning.AI & AWS
-* **Machine Learning in Production** — DeepLearning.AI
-* Certified in **Python**, **C++**, and **SQL**
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=python,cpp,java,js,pytorch,tensorflow,fastapi,flask,mysql,mongodb,postgres,docker,linux,git,aws" />
+
+</p>
+
+<p align="center">
+Transformers • Reinforcement Learning • Computer Vision • AI Agents • ROS2 • NVIDIA Isaac Sim
+</p>
 
 ---
 
 ## 🌐 Connect
 
-📧 **Email:** [yashdoke215@gmail.com](mailto:yashdoke215@gmail.com)
-
-🔗 **LinkedIn:** [linkedin.com/in/yash-doke](https://linkedin.com/in/yash-doke)
-
-💻 **GitHub:** [github.com/yashdoke7](https://github.com/yashdoke7)
-
----
-
-## ✨ Philosophy
-
-> “Research means nothing if it can’t perform in the real world. Build intelligently, deploy responsibly.”
-
----
-
+<p align="center">
+📧 yashdoke215@gmail.com • 
+<a href="https://linkedin.com/in/yash-doke">LinkedIn</a> • 
+<a href="https://github.com/yashdoke7">GitHub</a>
+</p>
