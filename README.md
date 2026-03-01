@@ -2,7 +2,7 @@
 
 <p align="center">
 AI Systems • Multi-Agent Learning • LLM Infrastructure <br>
-Computer Engineering @ SPPU | CGPA: 9.47
+Computer Engineering @ SPPU | CGPA: 9.34
 </p>
 
 <p align="center">
