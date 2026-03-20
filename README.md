@@ -17,10 +17,10 @@ Computer Engineering @ SPPU | CGPA: 9.34/10
 `Python` `Ollama` `ChromaDB` `nomic-embed-text`
 
 Architected an OS-inspired paged memory system (L0–L3: Topic Index → Summaries → Embeddings → Raw Turns) enabling infinite context scaling with **adaptive token consumption (~6k tokens/turn)**.
-- **3.3× Higher Compliance:** Outperformed RAG baselines (6.67 vs 2.00/10) in constraint-heavy reasoning tasks via a dedicated constraint store.
-- **Efficiency at Scale:** Achieved a **67% pairwise win rate** against full-context (32k) baselines while reducing token usage by **~25%**.
-- **Resource Optimization:** Cut vector storage costs by **50%** compared to standard RAG at equivalent retrieval performance.
-- **Key Insight:** Identified the *RAG Compliance Paradox*—demonstrating that 100% keyword retrieval accuracy often yields low (2.0/10) reasoning adherence.
+- **State-of-the-Art Compliance:** Achieved **8.4/10** and **8.7/10** adherence scores on constraint-tracking benchmarks, significantly outperforming RAG (**5.4/10**) and RAG+Summary (**5.9/10**).
+- **Solves Context Collapse:** Maintained **High Compliance (9.0/10)** in late-stage conversations (Turn 100+) where standard RAG models degraded to **3.0/10**.
+- **Efficiency at Scale:** Delivers **67% pairwise win rate** against full-context baselines while using **~25% fewer tokens** (adaptive 6k vs saturated 8k/32k).
+- **Resource Optimization:** Cut vector storage costs by **50%** via hierarchical paging while eliminating the *RAG Compliance Paradox* (high retrieval recall but low reasoning adherence).
 
 ### 🔬 LLM Reasoning Pipeline — Chain-of-Thought Evaluation
 `PyTorch` `Hugging Face TRL` `QLoRA` `PEFT` `GGUF` `Ollama`
@@ -83,7 +83,7 @@ Analyzed extensive Git commit histories to model software evolution, training pr
 ## 📌 Affiliations
 
 - **ACM Student Chapter** — Marketing Head  
-- **Team Vulcans Robotics** — AI Systems Engineer
+- **Team Vulcans Robotics** — Software Team
 
 ---
 
