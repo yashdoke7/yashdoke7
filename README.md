@@ -6,21 +6,21 @@
 </p>
 
 <p align="center">
-  I build intelligent systems that connect <b>research ideas</b> with <b>practical deployment</b>.
+  Designing intelligent systems that connect <b>research</b> with <b>practical deployment</b>.
 </p>
 
 ---
 
 ## About Me
 
-I work on long-horizon language systems, reasoning evaluation, retrieval and memory architectures, and applied AI systems that can move from experimentation to production.
+I work on long-horizon language systems, reasoning evaluation, retrieval and memory architectures, and applied AI systems that move from experimentation to production.
 
-My focus areas include:
+My current interests include:
 - hierarchical memory for LLMs
 - reasoning evaluation and fine-tuning
+- production ML systems
 - computer vision and deepfake detection
 - robotics, navigation, and reinforcement learning
-- production ML systems and data-driven automation
 
 ---
 
@@ -29,33 +29,36 @@ My focus areas include:
 ### HierMem — Hierarchical Context Management for LLMs
 `Python` `Ollama` `ChromaDB` `nomic-embed-text`
 
-Built an OS-inspired paged memory system with L0–L3 hierarchy: Topic Index → Summaries → Embeddings → Raw Turns. Designed for long-horizon conversations with adaptive token usage.
+Built an OS-inspired paged memory system with an L0–L3 hierarchy: Topic Index → Summaries → Embeddings → Raw Turns, designed for long-horizon conversations with adaptive token usage.
 
-- Achieved **8.4/10** and **8.7/10** adherence scores on constraint-tracking benchmarks.
-- Outperformed RAG and RAG+Summary baselines on late-turn compliance.
-- Reduced token usage through adaptive passthrough and hierarchical paging.
-- Cut vector storage costs through structured memory layering.
+- Achieved **8.461** mean judge score and **0.933** constraint survival across 15 datasets.
+- Reduced mean compute cost per turn to **0.0176**, outperforming full-history and retrieval baselines.
+- Maintained strong late-turn compliance in long conversations where standard baselines degraded.
+- Designed a constraint-first prompt assembly pipeline to keep active rules visible during generation.
+- Reduced vector storage cost through hierarchical paging and selective retrieval.
 
-### LLM Reasoning Pipeline
+### LLM Reasoning Pipeline — Chain-of-Thought Evaluation
 `PyTorch` `Hugging Face TRL` `QLoRA` `PEFT` `GGUF` `Ollama`
 
 Developed a reasoning evaluation pipeline for diagnosing step-level failures in large language models.
 
 - Fine-tuned Qwen 2.5 3B to reduce multi-step reasoning failures.
 - Built ground-truth backtracking and error propagation analysis for CoT traces.
-- Quantized models to **GGUF** for local inference through Ollama.
-- Created synthetic structured training data for step-by-step reasoning tasks.
+- Quantized fine-tuned models to **GGUF** for local inference through Ollama.
+- Created a synthetic data pipeline for structured step-by-step reasoning traces.
 
 ### AI-Generated Video Detection
 `PyTorch` `SigLIP` `Transformer` `Continual Learning`
 
 Engineered a deepfake detection system designed to stay robust across domains and changing video distributions.
 
-- Reached **92% AUC-ROC** across cross-domain benchmarks.
+- Achieved **92% AUC-ROC** across cross-domain benchmarks.
 - Used replay buffers, bottleneck adapters, and distillation to reduce catastrophic forgetting.
 - Built an automated frame-sampling and block-aggregation pipeline for verification.
 
 ---
+
+## Featured Projects
 
 ### ABU Robocon 2026 — Autonomous Navigation Stack
 `NVIDIA Isaac Sim` `Path Planning` `Python` `MATLAB` `PPO`
@@ -64,7 +67,7 @@ Lead architect for the autonomous navigation system in the ABU Robocon 2026 comp
 
 - Implemented modified A* planning for partial observability and dynamic obstacles.
 - Deployed PPO-based control with reward shaping for rule-compliant navigation.
-- Validated logic in high-fidelity simulation before real-world integration.
+- Validated logic in simulation before real-world integration.
 
 ---
 
