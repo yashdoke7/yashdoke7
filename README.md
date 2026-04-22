@@ -28,6 +28,7 @@ My current interests include:
 
 ### 🚀 HierMem: OS-Inspired Memory for Infinite Conversations
 `Pytorch` `Ollama` `ChromaDB` `LiteLLM` `RAG`
+
 HierMem is a research-grade context management system that treats LLM memory like a paged OS hierarchy. It solves the "context window wall" by prioritizing smart pruning over raw token dumping.
 
 📈 Performance: Achieved a 4.7x memory compression ratio and 33% lower inference costs without quality loss.
