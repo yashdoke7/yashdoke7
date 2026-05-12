@@ -6,6 +6,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-yash--doke-0a66c2?style=flat-square&logo=linkedin)](https://linkedin.com/in/yash-doke)
 [![PyPI](https://img.shields.io/badge/PyPI-llm--hiermem-3775a9?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/llm-hiermem/)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/hiermem?period=total&units=INTERNATIONAL_SYSTEM&left_color=0a1628&right_color=3775a9&left_text=downloads)](https://pepy.tech/projects/hiermem)
 [![HuggingFace](https://img.shields.io/badge/🤗%20Hugging%20Face-yashdoke7-ff9d00?style=flat-square)](https://huggingface.co/yashdoke7)
 [![Email](https://img.shields.io/badge/Email-yashdoke215@gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:yashdoke215@gmail.com)
 ![Profile views](https://komarev.com/ghpvc/?username=yashdoke7&color=4a9eff&style=flat-square&label=Profile+Views)
@@ -43,6 +44,7 @@ HierMem is an OS-inspired hierarchical paged memory architecture for long-horizo
 
 [![GitHub](https://img.shields.io/badge/GitHub-llm--hiermem-181717?style=flat-square&logo=github)](https://github.com/yashdoke7/llm-hiermem)
 [![PyPI](https://img.shields.io/badge/PyPI-live-3775a9?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/llm-hiermem/)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/hiermem?period=total&units=INTERNATIONAL_SYSTEM&left_color=181717&right_color=3775a9&left_text=downloads)](https://pepy.tech/projects/hiermem)
 [![Dataset](https://img.shields.io/badge/HuggingFace-dataset-ff9d00?style=flat-square)](https://huggingface.co/yashdoke7)
 
 ---
