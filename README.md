@@ -4,8 +4,6 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=4A9EFF&center=true&vCenter=true&width=720&lines=AI%2FML+Engineer+%C2%B7+Researcher+%C2%B7+Robotics;Building+LLM+infrastructure+and+intelligent+systems;From+research+prototypes+to+deployed+systems" alt="Typing SVG" />
 
-<br/>
-
 [![GitHub](https://img.shields.io/badge/GitHub-yashdoke7-181717?style=flat-square\&logo=github)](https://github.com/yashdoke7)
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Yash%20Doke-4285F4?style=flat-square\&logo=googlescholar\&logoColor=white)](https://scholar.google.com/citations?user=jOg2MUIAAAAJ&hl=en)
 [![PyPI](https://img.shields.io/badge/PyPI-yashdoke7-3775A9?style=flat-square\&logo=pypi\&logoColor=white)](https://pypi.org/user/yashdoke7/)
