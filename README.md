@@ -13,8 +13,6 @@
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-yashdoke7-FFD21E?style=flat-square)](https://huggingface.co/yashdoke7)
 [![Email](https://img.shields.io/badge/Email-yashdoke215%40gmail.com-EA4335?style=flat-square\&logo=gmail\&logoColor=white)](mailto:yashdoke215@gmail.com)
 
-<br/>
-
 **BE Computer Engineering @ PESMCOE, SPPU · CGPA 9.34/10**
 
 *Building AI systems across LLM infrastructure, machine learning, and autonomous robotics.*
