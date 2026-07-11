@@ -19,6 +19,10 @@
 
 *Building AI systems across LLM infrastructure, machine learning, and autonomous robotics.*
 
+<br/>
+
+<img src="https://github.com/user-attachments/assets/db1f70a4-c525-4e6f-b55e-ac8fe4e991b8" width="85%" alt="Coding animation"/>
+
 </div>
 
 ---
