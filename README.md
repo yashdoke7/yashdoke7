@@ -281,8 +281,6 @@ Developing autonomous navigation and perception systems for PESMCOE's ABU Roboco
 
 [![Profile Views](https://komarev.com/ghpvc/?username=yashdoke7\&color=4a9eff\&style=flat-square\&label=Profile+Views)](https://github.com/yashdoke7)
 
-<br/><br/>
-
 *"The gap between research and production is where I work."*
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a3a8f,100:0a1628&height=90&section=footer" width="100%"/>
