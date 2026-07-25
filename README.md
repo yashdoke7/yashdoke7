@@ -25,39 +25,40 @@
 
 ## 🕸️ SkeletonGraph
 
-> **Structural code retrieval for LLM coding agents.**
+> **Structural code retrieval for LLM coding agents — zero-LLM index, served over MCP.**
 
-SkeletonGraph is a structure-aware retrieval layer for coding agents. It builds a **zero-LLM repository index** from source code structure and exposes targeted retrieval through the **Model Context Protocol (MCP)**, helping agents retrieve relevant symbols and dependencies instead of repeatedly consuming entire files.
+SkeletonGraph is a structure-aware retrieval layer for coding agents. It builds a **zero-LLM repository index** from source code structure and exposes targeted retrieval through the **Model Context Protocol (MCP)**, so an agent lands on the exact function to edit instead of reading whole files to find it.
 
 <table>
 <tr>
 <td><b>Index</b></td>
-<td>tree-sitter symbol graph + PageRank centrality</td>
+<td>tree-sitter symbol graph + call graph + PageRank centrality (10 languages, no LLM calls)</td>
 </tr>
 <tr>
 <td><b>Retrieval</b></td>
-<td>BM25 + code embeddings + structural signals via RRF</td>
+<td>BM25 + code embeddings + structural rerank, fused via reciprocal rank fusion</td>
 </tr>
 <tr>
 <td><b>Interface</b></td>
-<td>MCP tools + portable <code>sg</code> CLI</td>
+<td>MCP server + portable <code>sg</code> CLI</td>
 </tr>
 <tr>
 <td><b>Evaluation</b></td>
-<td>SWE-bench Verified & Pro</td>
+<td>SWE-bench Verified & SWE-rebench, 100-task Docker-verified deployment study</td>
 </tr>
 </table>
 
 **Highlights**
 
-* **Zero-LLM indexing** — repository structure is built without API calls
-* Hybrid lexical, semantic, and structural retrieval
-* Cross-file dependency graph built through tree-sitter parsing
-* MCP integration for use with compatible coding agents and IDE workflows
-* Benchmarked against BM25, repository-map, and graph-based retrieval baselines
+* **Zero-LLM indexing** — repository structure built with no API calls, instant to rebuild after every edit
+* Matched a frontier coding agent's native solve rate while cutting **p95 (tail) cost by 42%**
+* Hybrid lexical, semantic, and structural retrieval — highest recall of 8 benchmarked pipelines
+* Cross-file call graph + PageRank centrality built through tree-sitter parsing
+* Published to PyPI and the official MCP Registry — works with Claude Code, Cursor, Copilot, Windsurf, and any MCP client
 
-[![Repository](https://img.shields.io/badge/GitHub-skeletongraph-181717?style=flat-square\&logo=github)](https://github.com/yashdoke7/skeletongraph)
-[![Stars](https://img.shields.io/github/stars/yashdoke7/skeletongraph?style=flat-square\&logo=github\&label=Stars)](https://github.com/yashdoke7/skeletongraph/stargazers)
+[![PyPI](https://img.shields.io/pypi/v/skeletongraph.svg?style=flat-square&color=blue)](https://pypi.org/project/skeletongraph/)
+[![Repository](https://img.shields.io/badge/GitHub-skeletongraph-181717?style=flat-square&logo=github)](https://github.com/yashdoke7/skeletongraph)
+[![Stars](https://img.shields.io/github/stars/yashdoke7/skeletongraph?style=flat-square&logo=github&label=Stars)](https://github.com/yashdoke7/skeletongraph/stargazers)
 ![MCP](https://img.shields.io/badge/Protocol-MCP-534AB7?style=flat-square)
 ![Index](https://img.shields.io/badge/Index-Zero--LLM-0F6E56?style=flat-square)
 
