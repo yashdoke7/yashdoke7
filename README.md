@@ -23,16 +23,32 @@
 
 ---
 
-## 🕸️ SkeletonGraph
+## 👋 About
 
-> **Structural code retrieval for LLM coding agents — zero-LLM index, served over MCP.**
+I build and evaluate **LLM agent systems**: retrieval and memory layers that make coding agents cheaper and assistants more private, measured with controlled experiments rather than demos. Two open-source packages on PyPI, two research preprints, and a third system, PERCH, a local-first Windows assistant.
 
-SkeletonGraph is a structure-aware retrieval layer for coding agents. It builds a **zero-LLM repository index** from source code structure and exposes targeted retrieval through the **Model Context Protocol (MCP)**, so an agent lands on the exact function to edit instead of reading whole files to find it.
+<div align="center">
+
+| 🏆 | 📄 | 📦 | 🤖 |
+| :---: | :---: | :---: | :---: |
+| **Winner**<br/>AMD Developer Hackathon Act II | **2 preprints**<br/>Research Square, 2026 | **1,400+ downloads**<br/>HierMem on PyPI | **ABU Robocon 2026**<br/>Software & AI Lead |
+
+</div>
+
+---
+
+## 🧭 Featured Systems
+
+### 🕸️ SkeletonGraph
+
+> **Structural code retrieval for LLM coding agents. Zero-LLM index, served over MCP.**
+
+An MCP server that gives coding agents function-level repository context, so an agent lands on the exact function to edit instead of reading whole files to find it.
 
 <table>
 <tr>
 <td><b>Index</b></td>
-<td>tree-sitter symbol graph + call graph + PageRank centrality (10 languages, no LLM calls)</td>
+<td>Tree-sitter symbol graph, cross-file call graph, PageRank centrality (10 languages, no LLM calls)</td>
 </tr>
 <tr>
 <td><b>Retrieval</b></td>
@@ -40,69 +56,91 @@ SkeletonGraph is a structure-aware retrieval layer for coding agents. It builds 
 </tr>
 <tr>
 <td><b>Interface</b></td>
-<td>MCP server + portable <code>sg</code> CLI</td>
+<td>MCP server + portable <code>sg</code> CLI; works with Claude Code, Codex, Cursor, Copilot, Windsurf</td>
 </tr>
 <tr>
 <td><b>Evaluation</b></td>
-<td>SWE-bench Verified & SWE-rebench, 100-task Docker-verified deployment study</td>
+<td>3,629 agent runs over 150 SWE-bench issues, Docker-verified patches, paired significance tests</td>
 </tr>
 </table>
 
-**Highlights**
+**Results**
 
-* **Zero-LLM indexing** — repository structure built with no API calls, instant to rebuild after every edit
-* Matched a frontier coding agent's native solve rate while cutting **p95 (tail) cost by 42%**
-* Hybrid lexical, semantic, and structural retrieval — highest recall of 8 benchmarked pipelines
-* Cross-file call graph + PageRank centrality built through tree-sitter parsing
-* Published to PyPI and the official MCP Registry — works with Claude Code, Cursor, Copilot, Windsurf, and any MCP client
+* Right file on the first search **86% of the time vs. 66%** for Claude Code's built-in search
+* Matched the native agent's solve rate at **42% lower p95 (tail) cost**
+* Highest recall (0.91) at the lowest token cost of any system tested, including aider's repo-map
+* **Finding:** production coding agents lock their MCP tool manifest about 2 seconds after launch, silently dropping slower servers
 
 [![PyPI](https://img.shields.io/pypi/v/skeletongraph.svg?style=flat-square&color=blue)](https://pypi.org/project/skeletongraph/)
 [![Repository](https://img.shields.io/badge/GitHub-skeletongraph-181717?style=flat-square&logo=github)](https://github.com/yashdoke7/skeletongraph)
 [![Stars](https://img.shields.io/github/stars/yashdoke7/skeletongraph?style=flat-square&logo=github&label=Stars)](https://github.com/yashdoke7/skeletongraph/stargazers)
-![MCP](https://img.shields.io/badge/Protocol-MCP-534AB7?style=flat-square)
-![Index](https://img.shields.io/badge/Index-Zero--LLM-0F6E56?style=flat-square)
+[![Preprint](https://img.shields.io/badge/Preprint-Research%20Square-1a3a8f?style=flat-square)](https://doi.org/10.21203/rs.3.rs-10749266/v1)
 
 ---
 
-## 🧠 HierMem
+### 🧠 HierMem
 
 > **Constraint-preserving hierarchical memory for long-horizon LLM conversations.**
 
-HierMem is an OS-inspired hierarchical memory architecture designed to preserve constraints and relevant context across long conversations. Inspired by virtual-memory paging, it combines a lightweight curator, a priority-aware constraint store, and a multi-level memory hierarchy to manage context under a bounded token budget.
+An OS-inspired memory layer: a four-level hierarchy (topic index, summaries, embeddings, raw turns), a small-LLM curator that retrieves only the relevant slice each turn, and a non-evictable constraint zone in every prompt.
 
-<table>
-<tr>
-<td><b>Curator</b></td>
-<td>Reads a compact L0 index to identify relevant memory</td>
-</tr>
-<tr>
-<td><b>Retrieval</b></td>
-<td>Keyword · Semantic · Hierarchical · Hybrid</td>
-</tr>
-<tr>
-<td><b>Assembly</b></td>
-<td>Attention-aware bounded context construction</td>
-</tr>
-<tr>
-<td><b>Memory</b></td>
-<td>Constraint extraction and hierarchical L0 → L3 archival</td>
-</tr>
-</table>
+| Evaluation (50-turn conversations, 4 domains) | Result |
+| :-- | :-- |
+| LLM-as-judge score | **8.46** vs. 7.15 (RAG + Summary) and 6.90 (full history) |
+| Constraint survival | **93.3%** over long sessions |
+| Compute cost | **36.9% lower** than full-history context |
+| Memory compression | **4.7×** vs. raw context |
 
-| Evaluation          | Result                                           |
-| :------------------ | :----------------------------------------------- |
-| Memory compression  | **4.7×** vs. raw context                         |
-| Constraint survival | **93.3%** over long sessions                     |
-| LLM-as-Judge        | **8.4–8.7 / 10**                                 |
-| Evaluated against   | RAG · RAG + Summary · MemGPT-style · Raw context |
+Won the **AMD Developer Hackathon Act II**.
 
-[![Repository](https://img.shields.io/badge/GitHub-llm--hiermem-181717?style=flat-square\&logo=github)](https://github.com/yashdoke7/llm-hiermem)
-[![PyPI](https://img.shields.io/badge/PyPI-hiermem-3775A9?style=flat-square\&logo=pypi\&logoColor=white)](https://pypi.org/project/hiermem/)
-[![Downloads](https://static.pepy.tech/personalized-badge/hiermem?period=total\&units=INTERNATIONAL_SYSTEM\&left_color=black\&right_color=blue\&left_text=downloads)](https://pepy.tech/projects/hiermem)
+[![Repository](https://img.shields.io/badge/GitHub-llm--hiermem-181717?style=flat-square&logo=github)](https://github.com/yashdoke7/llm-hiermem)
+[![PyPI](https://img.shields.io/badge/PyPI-hiermem-3775A9?style=flat-square&logo=pypi&logoColor=white)](https://pypi.org/project/hiermem/)
+[![Downloads](https://static.pepy.tech/personalized-badge/hiermem?period=total&units=INTERNATIONAL_SYSTEM&left_color=black&right_color=blue&left_text=downloads)](https://pepy.tech/projects/hiermem)
+[![Preprint](https://img.shields.io/badge/Preprint-Research%20Square-1a3a8f?style=flat-square)](https://doi.org/10.21203/rs.3.rs-10055780/v1)
 
 ---
 
-## 🔬 Selected Projects
+### 🪺 PERCH
+
+> **Local-first Windows AI assistant with user-owned, privacy-typed memory.**
+
+Summon it with a hotkey over any selection or screenshot; it answers in a panel beside your work using a local Ollama model or any OpenAI-compatible API, with an agent loop that calls tools.
+
+<table>
+<tr>
+<td><b>Memory</b></td>
+<td>Markdown files in six privacy-typed classes; rebuildable vector index; private requests forced local</td>
+</tr>
+<tr>
+<td><b>Admission gate</b></td>
+<td>Per-class similarity floor plus relative margin; abstains when nothing is relevant</td>
+</tr>
+<tr>
+<td><b>Context packer</b></td>
+<td>Memory and tool results share one token budget, with live eviction</td>
+</tr>
+<tr>
+<td><b>Evaluation</b></td>
+<td>Thresholds fitted by 5-fold CV on a 112-question persona, frozen, then tested on a held-out persona (69 questions)</td>
+</tr>
+</table>
+
+* Held-out **F1 0.86 with zero private leaks** vs. 0.49 and 24 leaks for naive top-4 retrieval
+* Benchmark is self-authored, so results are directional; paraphrased queries are the weakest case (F1 0.82)
+
+[![Repository](https://img.shields.io/badge/GitHub-perch-181717?style=flat-square&logo=github)](https://github.com/yashdoke7/perch)
+![Python](https://img.shields.io/badge/Python-Windows%2010%2F11-3776AB?style=flat-square&logo=python&logoColor=white)
+
+---
+
+## 📄 Publications
+
+* **SkeletonGraph: A Zero-LLM Structural Retrieval Engine for Coding Agents, and Why Its Gains Land in the Cost Tail, Not the Median.** Research Square preprint, 2026. [doi:10.21203/rs.3.rs-10749266/v1](https://doi.org/10.21203/rs.3.rs-10749266/v1)
+* **HierMem: Hierarchical Memory for Long-Horizon LLM Conversations.** Research Square preprint, 2026. [doi:10.21203/rs.3.rs-10055780/v1](https://doi.org/10.21203/rs.3.rs-10055780/v1)
+
+---
+
+## 🔬 More Projects
 
 <table>
 <tr>
@@ -110,14 +148,11 @@ HierMem is an OS-inspired hierarchical memory architecture designed to preserve 
 
 ### [LLM Reasoning Pipeline](https://github.com/yashdoke7/llm-reasoning-pipeline)
 
-Step-level diagnosis and targeted fine-tuning for LLM reasoning failures.
+Step-level diagnosis and targeted fine-tuning of small-LLM reasoning.
 
-* QLoRA 4-bit fine-tuning of Qwen 2.5 3B
-* **63% reduction** in step-level failure rate
+* QLoRA fine-tune of Qwen2.5-3B: accuracy **62.5% → 76.3%**
 * Ground-truth backtracking and error-propagation analysis
-* Local inference through llama.cpp
-
-<br/>
+* GGUF export for local inference
 
 `PyTorch` `QLoRA` `PEFT` `GGUF`
 
@@ -126,84 +161,38 @@ Step-level diagnosis and targeted fine-tuning for LLM reasoning failures.
 
 ### [AI-Generated Video Detection](https://github.com/yashdoke7/ai-generated-video-detection)
 
-Deepfake detection designed for robustness across changing data distributions.
+Deepfake detection built for robustness under dataset shift.
 
-* **92% AUC-ROC** across multiple benchmark datasets
-* SigLIP-based visual representations
-* Replay buffers and knowledge distillation
-* Continual-learning pipeline for dataset shifts
-
-<br/>
+* **92% AUC-ROC** across benchmark datasets
+* SigLIP representations, replay buffers, knowledge distillation
+* Continual-learning pipeline against catastrophic forgetting
 
 `PyTorch` `SigLIP` `Transformers` `Continual Learning`
 
 </td>
 </tr>
-
 <tr>
-<td width="50%" valign="top">
-
-### [AquaIntel](https://github.com/yashdoke7/AquaIntel)
-
-Weather-aware ship-route optimisation using adaptive path planning.
-
-* Enhanced A* with dynamic grid weighting
-* Live weather and environmental signals
-* Data-update pipeline reduced from **3.6 h to 36 min**
-* Interactive route visualisation
-
-<br/>
-
-`Python` `A*` `OpenWeatherMap` `Leaflet.js`
-
-</td>
 <td width="50%" valign="top">
 
 ### [Fraud Detection System](https://github.com/yashdoke7/FraudDetection)
 
-End-to-end machine-learning pipeline for real-time fraud scoring.
+End-to-end ML pipeline for real-time fraud scoring.
 
-* **96.2% accuracy** and **0.92 AUC-ROC**
-* XGBoost and neural-network models
-* Feature engineering with transactional and geolocation signals
-* FastAPI-based inference service
+* **96.2% accuracy**, **0.92 AUC-ROC**
+* XGBoost and neural networks on transactional and geolocation features
+* FastAPI inference service
 
-<br/>
-
-`XGBoost` `FastAPI` `scikit-learn` `Neural Networks`
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
-### [NutriSense](https://github.com/yashdoke7/nutrisense)
-
-Multimodal AI platform for food analysis and nutrition-oriented insights.
-
-* Gemini-based multimodal food recognition
-* Dietary Q&A and longitudinal trend analysis
-* Cloud-hosted backend with persistent user data
-* Authentication and accessible web interface
-
-<br/>
-
-`Gemini API` `Google Cloud` `Firebase` `FastAPI`
+`XGBoost` `FastAPI` `scikit-learn`
 
 </td>
 <td width="50%" valign="top">
 
 ### [Self-Evolving Multi-Agent Governance](https://github.com/Harsh-4210/Self_Evolving_Multi_Agent_Governance)
 
-Multi-agent governance simulation with adaptive decision policies.
+Multi-agent governance simulation with adaptive policies (collaboration).
 
-* PPO-based agents and quadratic voting
-* Reputation-weighted decision mechanisms
-* Adaptive reward structures
-* Governance-event logging and analysis
-
-<br/>
+* PPO agents with quadratic voting
+* Reputation-weighted decisions and adaptive rewards
 
 `Ray RLlib` `PettingZoo` `PPO` `PostgreSQL`
 
@@ -211,79 +200,36 @@ Multi-agent governance simulation with adaptive decision policies.
 </tr>
 </table>
 
+Also: [AquaIntel](https://github.com/yashdoke7/AquaIntel) (weather-aware ship routing with enhanced A\*; data pipeline cut from 3.6 h to 36 min) · [NutriSense](https://github.com/yashdoke7/nutrisense) (Gemini-based multimodal food and nutrition analysis)
+
 ---
 
 ## 🤖 Robotics
 
-### ABU Robocon 2026 · Team Vulcans
+**ABU Robocon 2026 · Team Vulcans · Software & AI Lead.** Autonomous navigation and perception for PESMCOE's robots: path planning under partial observability, real-time computer vision, ROS2 architecture, and simulation in NVIDIA Isaac Sim and Gazebo, integrated with embedded controllers.
 
-**Software & AI Lead**
-
-Developing autonomous navigation and perception systems for PESMCOE's ABU Robocon 2026 robots.
-
-* Path planning under partial observability and dynamic obstacles
-* Computer vision and real-time perception pipelines
-* ROS2-based software architecture
-* Simulation and validation using NVIDIA Isaac Sim and Gazebo
-* Integration with embedded controllers and physical robot hardware
-
-`ROS2` `NVIDIA Isaac Sim` `Gazebo` `Python` `C++` `Computer Vision`
+`ROS2` `Isaac Sim` `Gazebo` `Python` `C++` `Computer Vision`
 
 ---
 
 ## ⚙️ Technical Stack
 
 <table>
-<tr>
-<td><b>Languages</b></td>
-<td>Python · C++ · TypeScript · SQL · MATLAB</td>
-</tr>
-<tr>
-<td><b>Machine Learning</b></td>
-<td>PyTorch · Transformers · QLoRA/PEFT · XGBoost · SigLIP · sentence-transformers</td>
-</tr>
-<tr>
-<td><b>LLM Systems</b></td>
-<td>Ollama · llama.cpp · GGUF · LiteLLM · RAG · MCP · tree-sitter</td>
-</tr>
-<tr>
-<td><b>Robotics</b></td>
-<td>ROS2 · NVIDIA Isaac Sim · Gazebo · Path Planning · Reinforcement Learning</td>
-</tr>
-<tr>
-<td><b>Backend & Data</b></td>
-<td>FastAPI · Flask · PostgreSQL · MongoDB · Firebase</td>
-</tr>
-<tr>
-<td><b>Cloud & Tools</b></td>
-<td>Google Cloud · AWS · AMD Developer Cloud · Docker · Git · pytest</td>
-</tr>
+<tr><td><b>Languages</b></td><td>Python · C++ · TypeScript · SQL</td></tr>
+<tr><td><b>ML & LLMs</b></td><td>PyTorch · Transformers · QLoRA/PEFT · RAG · MCP · Ollama · llama.cpp · LiteLLM · tree-sitter</td></tr>
+<tr><td><b>Robotics</b></td><td>ROS2 · NVIDIA Isaac Sim · Gazebo · Reinforcement Learning</td></tr>
+<tr><td><b>Backend & Tools</b></td><td>FastAPI · PostgreSQL · Firebase · Docker · Git · pytest · Google Cloud · AWS</td></tr>
 </table>
 
 ---
 
-## 📊 GitHub Activity
-
 <div align="center">
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=yashdoke7&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=4a9eff&icon_color=4a9eff&text_color=c9d1d9&include_all_commits=true&count_private=true" />
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=yashdoke7&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=4a9eff&icon_color=4a9eff&text_color=c9d1d9&include_all_commits=true&count_private=true" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yashdoke7&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=4a9eff&text_color=c9d1d9&langs_count=6" />
 
-<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yashdoke7&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=4a9eff&text_color=c9d1d9&langs_count=8" />
-
-</div>
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=yashdoke7&bg_color=0d1117&color=4a9eff&line=1a3a8f&point=4a9eff&area=true&area_color=1a3a8f&hide_border=true" width="100%"/>
-
----
-
-<div align="center">
-
-[![Profile Views](https://komarev.com/ghpvc/?username=yashdoke7\&color=4a9eff\&style=flat-square\&label=Profile+Views)](https://github.com/yashdoke7)
+<br/><br/>
 
 *"The gap between research and production is where I work."*
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a3a8f,100:0a1628&height=90&section=footer" width="100%"/>
 
 </div>
