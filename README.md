@@ -198,9 +198,35 @@ Multi-agent governance simulation with adaptive policies (collaboration).
 
 </td>
 </tr>
-</table>
+<tr>
+<td width="50%" valign="top">
 
-Also: [AquaIntel](https://github.com/yashdoke7/AquaIntel) (weather-aware ship routing with enhanced A\*; data pipeline cut from 3.6 h to 36 min) · [NutriSense](https://github.com/yashdoke7/nutrisense) (Gemini-based multimodal food and nutrition analysis)
+### [AquaIntel](https://github.com/yashdoke7/AquaIntel)
+
+Weather-aware ship-route optimisation using adaptive path planning.
+
+* Enhanced A* with dynamic grid weighting
+* Live weather signals; data-update pipeline cut from **3.6 h to 36 min**
+* Interactive route visualisation
+
+`Python` `A*` `OpenWeatherMap` `Leaflet.js`
+
+</td>
+<td width="50%" valign="top">
+
+### [NutriSense](https://github.com/yashdoke7/nutrisense)
+
+Multimodal AI platform for food analysis and nutrition insights.
+
+* Gemini-based multimodal food recognition
+* Dietary Q&A and longitudinal trend analysis
+* Cloud backend with authentication and persistent user data
+
+`Gemini API` `Google Cloud` `Firebase` `FastAPI`
+
+</td>
+</tr>
+</table>
 
 ---
 
